@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <body>
 
     
@@ -85,19 +87,33 @@
   $kode = substr($npm, 0, 6);
 		
     for ($x = 1; $x <= 9; $x++) {
-      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."000"."$x".".JPG'> ";
+      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."000"."$x".".JPG' class='w3-hover-opacity' onclick='onClick(this)'> ";
       if ($x % 7 == 0){
         //echo "<br>";
       }
     }
     for ($x = 10; $x <= 100; $x++) {
-      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."00"."$x".".JPG'> ";
+      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."00"."$x".".JPG' class='w3-hover-opacity' onclick='onClick(this)'> ";
       if ($x % 7 == 0){
         //echo "<br>";
       }
     }
  }
 ?>  
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-text-white w3-xxxlarge w3-container w3-display-topright">X</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" style="max-width:100%">
+  </div>
+</div>
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
 
 </body>
 </html>

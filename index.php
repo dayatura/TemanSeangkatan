@@ -50,10 +50,9 @@
 ?>
 
 <h1>Teman Angkatan</h1>
-<p>Ini adalah program rintisan untuk menampilkan foto pacis teman prodi seangkatan di Universitas Padjadjaran</p>
-<p>Untuk sementara program ini hanya bekerja untuk Fakultas MIPA</p>
+<p>Masukan NPM mu dan temukan teman satu angkatan di prodi mu</p>
 <p>Bagi yang ingin berkontribusi untuk mengembangkan project ini silahkan ikuti <a style="color:red; font-size: 20px;" href="https://github.com/dayatura/TemanSeangkatan">LINK</a> ini</p>
-<p>Enjoy n_n</p>
+
 <br>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   NPM   : <input type="text" name="npm" value="<?php echo $npm;?>">
@@ -77,19 +76,22 @@
     // fisip 170710150054
     //geofis 7
     // statis 6
+    //14081014050
+    //https://media.unpad.ac.id/photo/mahasiswa/130110/2014/130110140050.JPG
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
 	$prodi = substr($npm,3,1);
 	$angkatan = substr($npm,6,2);
+  $kode = substr($npm, 0, 6);
 		
     for ($x = 1; $x <= 9; $x++) {
-      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/140".$prodi."10/20".$angkatan."/140".$prodi."10".$angkatan."000"."$x".".JPG'> ";
+      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."000"."$x".".JPG'> ";
       if ($x % 7 == 0){
         //echo "<br>";
       }
     }
     for ($x = 10; $x <= 100; $x++) {
-      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/140".$prodi."10/20".$angkatan."/140".$prodi."10".$angkatan."00"."$x".".JPG'> ";
+      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."00"."$x".".JPG'> ";
       if ($x % 7 == 0){
         //echo "<br>";
       }

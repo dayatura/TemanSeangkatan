@@ -2,12 +2,9 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<body>
+<body style="background-color: #ffcd107">
 
-    
-    
     <?php
-    // define variables and set to empty values
     $npm = $npmErr = $angkatan = $prodi = $angkatanErr = $prodiErr = "";
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -15,32 +12,10 @@
         $npmErr = "Masukan npm";
       } else {
         $npm = test_input($_POST["npm"]);
-        // check if name only contains letters and whitespace
         if (!preg_match("/^[0-9]*$/",$npm)) {
           $npmErr = "Masukan hanya angka"; 
         }
-      }
-	  /*
-	  if (empty($_POST["angkatan"])) {
-        $angkatanErr = "Masukan dua digit angkatan";
-      } else {
-        $angkatan = test_input($_POST["angkatan"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[0-9]*$/",$angkatan)) {
-          $angkatanErr = "Masukan hanya angka"; 
-        }
-      }
-        
-      if (empty($_POST["prodi"])) {
-        $prodiErr = "Masukan 1 digit prodi";
-      } else {
-        $prodi = test_input($_POST["prodi"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[0-9]*$/",$prodi)) {
-          $prodiErr = "Masukan hana angka"; 
-        }
-      }    
-      */  
+      } 
     }
 
     function test_input($data) {
@@ -50,28 +25,25 @@
       return $data;
     }
 ?>
-
-<h1>Teman Angkatan</h1>
-<p>Masukan NPM mu dan temukan teman satu angkatan di prodi mu</p>
-<p>Bagi yang ingin berkontribusi untuk mengembangkan project ini silahkan ikuti <a style="color:red; font-size: 20px;" href="https://github.com/dayatura/TemanSeangkatan">LINK</a> ini</p>
-
-<br>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  NPM   : <input type="text" name="npm" value="<?php echo $npm;?>">
-  <span class="error"> Masukan NPM Lengkap (mis: 14081016005)<?php echo $npmErr;?></span>
-  <br><br>
-  <!--
-  Angkatan   : <input type="text" name="angkatan" value="<?php //echo $angkatan;?>">
-  <span class="error"> Masukan 2 digit angkatan (mis: 14)<?php //echo $angkatanErr;?></span>
-  <br><br>
-  Kode Prodi : <input type="text" name="prodi" value="<?php //echo $prodi;?>">
-  <span class="error"> Masukan kode prodi (mis: 1)<?php //echo $prodiErr;?></span>
-  <br><br>
-  -->
-  <input type="submit" name="submit" value="Submit">
-  <br><br>
-</form>
-
+<div class='w3-card-8 w3-center'>
+	<div class="w3-container w3-indigo">
+	<h1 class="w3-jumbo" style="text-align: center; color: #ffc107" >TEMAN ANGKATAN</h1>
+	<p style="text-align: center; color: #ffc107">Masukan NPM dan temukan teman prodi satu angkatan</p>
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+	  <div class="w3-row">
+	  <div class="w3-col w3-container" style="width:20%"></div>
+	  <input class="w3-col w3-input w3-border w3-light-grey" style="width:50%" type="text" name="npm" value="<?php echo $npm;?>" placeholder="Masukan NPM Lengkap (mis: 14081016005)"> 
+	  <div class="w3-col w3-container" style="width:1%"></div>
+	  <input class="w3-col w3-input w3-btn w3-amber" style="width:10%" type="submit" name="submit" value="GO">
+	  <div class="w3-rest"></div>
+	  </div>
+	  <br>
+	  <span class="error"><?php echo $npmErr;?></span>
+	</form>
+	
+	
+	<p>Bagi yang ingin berkontribusi untuk mengembangkan project ini silahkan ikuti <a style="color: #ffc107;" href="https://github.com/dayatura/TemanSeangkatan">LINK</a> ini</p>
+</div>
     
     
 <?php  //Ini adalah bagian untuk menampilkan gambar 
@@ -87,13 +59,13 @@
   $kode = substr($npm, 0, 6);
 		
     for ($x = 1; $x <= 9; $x++) {
-      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."000"."$x".".JPG' class='w3-hover-opacity' onclick='onClick(this)'> ";
+      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."000"."$x".".JPG' class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'>";
       if ($x % 7 == 0){
         //echo "<br>";
       }
     }
     for ($x = 10; $x <= 100; $x++) {
-      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."00"."$x".".JPG' class='w3-hover-opacity' onclick='onClick(this)'> ";
+      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."00"."$x".".JPG' class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'>";
       if ($x % 7 == 0){
         //echo "<br>";
       }

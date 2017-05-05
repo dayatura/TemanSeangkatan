@@ -70,7 +70,7 @@
         //echo "<br>";
       }
     }
-    for ($x = 100; $x <= 300; $x++) {
+    for ($x = 100; $x <= 150; $x++) {
       echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."0"."$x".".JPG' onerror='this.style.display='none'' class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'>";
       if ($x % 7 == 0){
         //echo "<br>";

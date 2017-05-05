@@ -59,13 +59,13 @@
   $kode = substr($npm, 0, 6);
 		
     for ($x = 1; $x <= 9; $x++) {
-      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."000"."$x".".JPG' class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'>";
+      echo "<figure> <img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."000"."$x".".JPG' alt="" class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'> <figcaption>".$kode.$angkatan."000".$x."</figcaption> </figure>";
       if ($x % 7 == 0){
         //echo "<br>";
       }
     }
     for ($x = 10; $x <= 100; $x++) {
-      echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."00"."$x".".JPG' class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'>";
+      echo "<figure> <img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."00"."$x".".JPG' alt="" class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'> <figcaption>".$kode.$angkatan."000".$x."</figcaption> </figure>";
       if ($x % 7 == 0){
         //echo "<br>";
       }

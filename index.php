@@ -66,7 +66,7 @@
     }
     for ($x = 10; $x <= 99; $x++) {
 	if ($kode == 140810 && $angkatan == 14 && $x == 50){
-		echo "<img src='https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/12115933_946292835408749_8555820563070722026_n.jpg?oh=98f9da674a157e830fcde6bd58738b94&oe=59B21BE2' onerror='this.style.display='none'' class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'>";
+		echo "<img src='https://instagram.fcgk5-1.fna.fbcdn.net/t51.2885-19/s320x320/23498979_303230860176415_5916636836893032448_n.jpg' onerror='this.style.display='none'' class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'>";
 	}else{
       		echo "<img src='https://media.unpad.ac.id/photo/mahasiswa/".$kode."/20".$angkatan."/".$kode.$angkatan."00"."$x".".JPG' onerror='this.style.display='none'' class='w3-hover-opacity w3-margin' style='box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); ' onclick='onClick(this)'>";
 	}

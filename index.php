@@ -42,7 +42,7 @@
 	</form>
 	
 	
-	<p>Bagi yang ingin berkontribusi untuk mengembangkan project ini silahkan ikuti <a style="color: #ffc107;" href="https://github.com/dayatura/TemanSeangkatan">LINK</a> ini</p>
+	<!-- <p>Bagi yang ingin berkontribusi untuk mengembangkan project ini silahkan ikuti <a style="color: #ffc107;" href="https://github.com/dayatura/TemanSeangkatan">LINK</a> ini</p> -->
 </div>
     
     
